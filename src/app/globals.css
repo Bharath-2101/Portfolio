@@ -1,26 +1,255 @@
 @import "tailwindcss";
 
+/* ----------------------------fonts---------------------------- */
+
+@font-face {
+  font-family: "Bharath Sans";
+  src: url("/fonts/NeueMontreal-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Bharath Sans";
+  src: url("/fonts/NeueMontreal-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Bharath Sans";
+  src: url("/fonts/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: 450;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Bharath Sans";
+  src: url("/fonts/NeueMontreal-Italic.otf") format("opentype");
+  font-weight: 450;
+  font-style: italic;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Bharath Sans";
+  src: url("/fonts/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Bharath Sans";
+  src: url("/fonts/NeueMontreal-BoldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: auto;
+}
+
+/* ---------------------------- COLORS ---------------------------- */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-dark: #1c1d20;
+  --color-dark-dark: #121212;
+  --color-light: #ffffff;
+  --color-blue: #455ce9;
+  --color-blue-dark: #334bd3;
+  --color-gray: #999d9e;
+  --color-lightgray: #e9eaeb;
+  --color-white: #ffffff;
+
+  --color-border: #1c1d202d;
+  --color-border-solid: #d2d2d2;
+  --color-border-light: #ffffff33;
+  --color-border-solid-light: #545557;
+
+  --color-text: #1c1d20;
+  --color-text-light: #fff;
+
+  --alert-error: #ff4444;
+  --alert-success: #24c958;
+
+  --animation-primary: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-fast: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-smooth: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-slow: all 0.9s cubic-bezier(0.7, 0, 0.3, 1);
+
+  --section-padding: clamp(5em, 21vh, 12em);
+  --container-padding: clamp(2.5em, 8vw, 8em);
+  --gap-padding: clamp(1.5em, 4vw, 2.5em);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+li,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  background-color: var(--color-dark-dark);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Bharath Sans", sans-serif;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  font-weight: 450;
+  font-style: normal;
+  font-size: 16px;
+  font-size: clamp(16px, 1.2vw, 19px);
+  background-color: var(--color-dark-dark);
+}
+
+/* #Seclections */
+::selection {
+  background-color: var(--color-text-light);
+  color: var(--color-dark);
+  text-shadow: none;
+}
+::-moz-selection {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  text-shadow: none;
+}
+
+/* -------------Typography--------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+ul,
+ol,
+span,
+strong,
+em {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: 450;
+  letter-spacing: normal;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+p:last-child,
+p.big:last-child,
+p.small:last-child,
+a:last-child,
+strong:last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-family: "Dennis Sans", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: clamp(3.25em, 7vw, 8em);
+  line-height: 1.065;
+  margin-bottom: 1em;
+  font-size: calc(clamp(3.25em, 7vw, 8em) * 0.875);
+}
+
+h2 {
+  font-family: "Dennis Sans", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: calc(clamp(3.25em, 5vw, 4.5em) * 0.75);
+  line-height: 1.065;
+  margin-bottom: 0.66em;
+}
+
+h3 {
+  font-family: "Dennis Sans", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: clamp(2.66em, 4.65vw, 5.32em);
+  line-height: 1.065;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-family: "Dennis Sans", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: clamp(1.55em, 2.3vw, 2.5em);
+  line-height: 1.45;
+  margin-bottom: 1em;
+}
+
+h5 {
+  font-family: "Dennis Sans", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: 0.6em;
+  line-height: 1.065;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+p {
+  font-family: "Dennis Sans", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  color: var(--text);
+  font-size: 1em;
+  line-height: 1.66;
+  margin-bottom: 1em;
+}
+
+p.small {
+  font-size: 0.8em;
+  line-height: 1.75;
+  letter-spacing: 0.015em;
+}
+
+p.big {
+  font-size: 1.2em;
+}
+
+strong {
+  font-weight: 800;
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark p {
+  color: var(--color-white);
 }
