@@ -61,6 +61,7 @@
   --color-gray: #999d9e;
   --color-lightgray: #e9eaeb;
   --color-white: #ffffff;
+  --color-selectionBackground: #f98a4f;
 
   --color-border: #1c1d202d;
   --color-border-solid: #d2d2d2;
@@ -99,6 +100,8 @@ ul {
 
 html,
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -119,13 +122,13 @@ body {
 
 /* #Seclections */
 ::selection {
-  background-color: var(--color-text-light);
-  color: var(--color-dark);
+  background-color: var(--color-selectionBackground);
+  color: var(--color-text-light);
   text-shadow: none;
 }
 ::-moz-selection {
-  background-color: var(--color-blue);
-  color: var(--color-white);
+  background-color: var(--color-selectionBackground);
+  color: var(--color-text-light);
   text-shadow: none;
 }
 
