@@ -1,0 +1,68 @@
+.HamburgerCon {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  height: clamp(4em, 4.5vw, 5em);
+  width: clamp(4em, 4.5vw, 5em);
+  border: 0.5px solid #4a4a4a;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 100;
+  background-color: #485e97;
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #121211;
+    position: absolute;
+    transform-origin: top;
+    transform: scaleY(0);
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  span {
+    position: absolute;
+    height: 0.5px;
+    width: 60%;
+    background-color: #fff;
+    transition: var(--animation-slow);
+    z-index: 5;
+
+    &:nth-child(1) {
+      top: 40%;
+      left: 20%;
+    }
+
+    &:nth-child(2) {
+      top: 60%;
+      right: 20%;
+    }
+  }
+
+  &:hover {
+    &::after {
+      transform-origin: bottom;
+      transform: scaleY(1);
+    }
+  }
+}
+
+.active {
+  span {
+    &:nth-child(1) {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+}
