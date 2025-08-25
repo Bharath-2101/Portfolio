@@ -1,0 +1,53 @@
+.MainContainer {
+  position: fixed;
+  top: clamp(18px, 5vw, 30px);
+  right: clamp(18px, 5vw, 30px);
+  background-color: var(--color-dark-dark);
+  border: 1px solid var(--color-light);
+  width: calc(clamp(18px, 7vw, 30px) * 3);
+  height: calc(clamp(18px, 7vw, 30px) * 1.8);
+  .NavCon {
+    height: 100%;
+    width: 100%;
+    padding-top: calc(clamp(18px, 7vw, 30px) * 1.8);
+    padding-right: calc(clamp(18px, 7vw, 30px) * 3 / 4);
+    padding-left: calc(clamp(18px, 7vw, 30px) * 3 / 4);
+    padding-bottom: calc(clamp(18px, 7vw, 30px) * 1.8 / 4);
+    color: var(--color-light);
+    display: grid;
+    grid-template-rows: 85% 15%;
+    box-sizing: border-box;
+
+    .NavLinksCon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      position: relative;
+      div {
+        display: flex;
+        span {
+          font-size: clamp(34px, 10vw, 45px);
+          line-height: 50px;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .SocialLinksCon {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      div {
+        display: flex;
+        a {
+          font-size: 10px;
+          color: var(--color-light);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
