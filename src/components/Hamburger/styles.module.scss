@@ -1,0 +1,41 @@
+.MainContainer {
+  position: absolute;
+  // top: calc(clamp(18px, 5vw, 30px) * 0.25);
+  // right: calc(clamp(18px, 5vw, 30px) * 0.25);
+  top: 0;
+  right: 0;
+  width: calc(clamp(18px, 7vw, 30px) * 3);
+  cursor: pointer;
+  aspect-ratio: 5 / 3;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-light);
+    transition: all 0.9s ease;
+    left: 25%;
+    mix-blend-mode: difference;
+  }
+
+  span:nth-child(1) {
+    bottom: 60%;
+  }
+
+  span:nth-child(2) {
+    bottom: 40%;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      bottom: 50%;
+      transform: rotate(30deg);
+    }
+
+    span:nth-child(2) {
+      bottom: 50%;
+      transform: rotate(-30deg);
+    }
+  }
+}
