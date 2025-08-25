@@ -256,3 +256,25 @@ p a {
 .theme-dark p {
   color: var(--color-white);
 }
+
+.UnderlineEffect {
+  position: relative;
+  &::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
