@@ -120,8 +120,12 @@ body {
   padding: 0;
   width: 100%;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
   position: relative;
   background-color: var(--color-dark-dark);
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {
@@ -253,15 +257,6 @@ p.big {
 
 strong {
   font-weight: 800;
-}
-
-a {
-  color: var(--color-blue);
-  text-decoration: none;
-}
-
-p a {
-  text-decoration: underline;
 }
 
 .theme-dark h1,
