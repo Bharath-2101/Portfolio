@@ -96,38 +96,41 @@ const NavMenu = () => {
   const handleMouseLeave = (e, index) => {};
 
   return (
-    <div ref={NavContainer} className={styles.MainContainer}>
-      <Hamburger />
-      <div className={styles.NavCon}>
-        <div className={styles.NavLinksCon}>
-          {NavLinks.map((link, index) => (
-            <div key={index} className="UnderlineEffect">
-              <span
+    <>
+      <div className={styles.Logo}>
+        <span>BHARATH KUMAR</span>
+      </div>
+      <div ref={NavContainer} className={`${styles.MainContainer}`}>
+        <Hamburger />
+        <div className={styles.NavCon}>
+          <div className={styles.NavLinksCon}>
+            {NavLinks.map((link, index) => (
+              <div
+                key={index}
                 ref={(el) => (linksRef.current[index] = el)}
-                onMouseEnter={(e) => handleMouseEnter(e, index)}
-                onMouseLeave={(e) => handleMouseLeave(e, index)}
-              >
-                {link.title}
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className={styles.SocialLinksCon}>
-          {SocialMedia.map((link, index) => (
-            <div key={index}>
-              <a
-                ref={(el) => (socialRef.current[index] = el)}
-                href={link.link}
-                target="_blank"
                 className="UnderlineEffect"
               >
                 <span>{link.title}</span>
-              </a>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
+          <div className={styles.SocialLinksCon}>
+            {SocialMedia.map((link, index) => (
+              <div key={index}>
+                <a
+                  ref={(el) => (socialRef.current[index] = el)}
+                  href={link.link}
+                  target="_blank"
+                  className="UnderlineEffect"
+                >
+                  <span>{link.title}</span>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
