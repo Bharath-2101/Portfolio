@@ -19,7 +19,7 @@
     padding-bottom: calc(clamp(18px, 7vw, 30px) * 1.8 / 4);
     color: var(--color-light);
     display: grid;
-    grid-template-rows: 85% 15%;
+    grid-template-rows: 95% 5%;
     box-sizing: border-box;
 
     .NavLinksCon {
@@ -39,20 +39,20 @@
       }
     }
 
-    .SocialLinksCon {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      div {
-        display: flex;
-        a {
-          font-size: 10px;
-          color: var(--color-light);
-          opacity: 0;
-        }
-      }
-    }
+    // .SocialLinksCon {
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: space-evenly;
+    //   align-items: center;
+    //   div {
+    //     display: flex;
+    //     a {
+    //       font-size: 10px;
+    //       color: var(--color-light);
+    //       opacity: 0;
+    //     }
+    //   }
+    // }
   }
 }
 
