@@ -50,6 +50,22 @@
   font-display: auto;
 }
 
+@font-face {
+  font-family: "Regular";
+  src: url("/fonts/EditorialNew.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Italic";
+  src: url("/fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: auto;
+}
+
 /* ---------------------------- COLORS ---------------------------- */
 
 :root {
