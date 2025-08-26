@@ -43,6 +43,7 @@
 
 .MainContainer {
   position: relative;
+  overflow-x: hidden;
   .SubCon {
     height: 100%;
     font-size: clamp(25px, 7vw, 56px);
