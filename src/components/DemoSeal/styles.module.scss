@@ -1,0 +1,10 @@
+.SvgContainer {
+  position: absolute;
+  top: clamp(-20px, -7vw, 0px);
+  right: 5vw;
+  font-family: "Regular";
+  .Svg {
+    height: clamp(80px, 20vw, 150px);
+    width: clamp(80px, 20vw, 150px);
+  }
+}
