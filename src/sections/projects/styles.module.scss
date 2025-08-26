@@ -1,0 +1,64 @@
+.MainContainer {
+  width: 100vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  position: relative;
+  .MainTitle {
+    width: 100%;
+    font-weight: 900;
+    font-size: clamp(1.8rem, 7vw, 4.5rem);
+    margin-bottom: calc(clamp(4rem, 4.5vw, 5rem) - 10px);
+    font-family: "Regular";
+  }
+  .ProjectContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .Header {
+      width: 100%;
+      display: grid;
+      font-weight: 900;
+      font-size: 24px;
+      border-bottom: 1px solid #ffffff;
+    }
+    .Row {
+      width: 100%;
+      display: grid;
+      border-bottom: 1px solid #ffffff;
+      z-index: 2;
+      cursor: pointer;
+      position: relative;
+      div {
+        mix-blend-mode: difference;
+        transition: transform 0.2s linear;
+      }
+      span {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: white;
+        transform: scaleY(0);
+        transition: transform 0.1s linear;
+      }
+      &:hover {
+        span {
+          transform: scaleY(1);
+        }
+        div {
+          &:nth-child(1) {
+            transform: translateX(5%);
+          }
+          &:nth-child(2) {
+            transform: scale(0.85);
+          }
+          &:nth-child(3) {
+            transform: translateX(-5%);
+          }
+        }
+      }
+    }
+  }
+}
