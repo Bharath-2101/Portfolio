@@ -60,7 +60,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className={`${styles.MainContainer} lg:mt-[4vw]`}>
+    <div className={`${styles.MainContainer}`}>
       <div className={styles.MainTitle}>Project Works</div>
       <DemoSeal />
       <div className={styles.ProjectContainer}>
@@ -72,7 +72,9 @@ const Projects = () => {
           <div className="text-right font-[Regular]">Year</div>
         </div>
         {projects.map((project, index) => (
-          <div
+          <a
+            href={project.link}
+            target="_blank"
             key={index}
             ref={(el) => (rowsRef.current[index] = el)}
             className={`${styles.Row} p-2 grid-cols-2 sm:grid-cols-3`}
@@ -83,7 +85,7 @@ const Projects = () => {
             </div>
             <div className="text-right">{project.year}</div>
             <span />
-          </div>
+          </a>
         ))}
       </div>
     </div>
