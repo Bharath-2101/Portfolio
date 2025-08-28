@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import Archives from "@/sections/Archives/Archives";
 
 const page = () => {
   useEffect(() => {
@@ -40,7 +41,7 @@ const page = () => {
       <NavMenu />
       <HeroSection />
       <Projects />
-      <div className="h-[1000px]" />
+      <Archives />
     </div>
   );
 };
