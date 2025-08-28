@@ -1,14 +1,64 @@
 const projects = [
-  { title: "Personal Portfolio", category: "Web Development", year: 2022 },
-  { title: "E-Commerce Store", category: "Full Stack", year: 2023 },
-  { title: "Chat App", category: "Mobile Development", year: 2021 },
-  { title: "Task Manager", category: "Web App", year: 2023 },
-  { title: "Weather Dashboard", category: "Frontend", year: 2020 },
-  { title: "Movie Recommender", category: "Machine Learning", year: 2022 },
-  { title: "Blog Platform", category: "Backend", year: 2021 },
-  { title: "Game Engine", category: "Game Development", year: 2024 },
-  { title: "Finance Tracker", category: "Web App", year: 2023 },
-  { title: "Smart Home Controller", category: "IoT", year: 2024 },
+  {
+    title: "Blog Platform",
+    category: "Full Stack",
+    year: 2025,
+    link: "http://github.com/bharath-2101",
+  },
+  {
+    title: "VRTL WRLD",
+    category: "ReImagined Web-App",
+    year: 2025,
+    link: "https://virtualworld3d.netlify.app/",
+  },
+  {
+    title: "HETH-CAMERA",
+    category: "Web Development",
+    year: 2025,
+    link: "https://heth.netlify.app/",
+  },
+  {
+    title: "Space-Furnitures",
+    category: "Web Development",
+    year: 2025,
+    link: "https://space-furnitures.netlify.app/",
+  },
+  {
+    title: "Diseaese Detection",
+    category: "Machine Learning",
+    year: 2024,
+    link: "http://github.com/bharath-2101",
+  },
+  {
+    title: "Plantify",
+    category: "Mobile App Development",
+    year: 2024,
+    link: "http://github.com/bharath-2101",
+  },
+  {
+    title: "Mobile Prepaid",
+    category: "Full Stack",
+    year: 2024,
+    link: "http://github.com/bharath-2101",
+  },
+  {
+    title: "Vehicle Management",
+    category: "Full Stack",
+    year: 2024,
+    link: "http://github.com/bharath-2101",
+  },
+  {
+    title: "2048",
+    category: "Game Development",
+    year: 2023,
+    link: "https://bharath-2048.netlify.app/",
+  },
+  {
+    title: "Minesweeper",
+    category: "Game Development",
+    year: 2023,
+    link: "https://bharath-minesweeper.netlify.app/",
+  },
 ];
 
 export { projects };
