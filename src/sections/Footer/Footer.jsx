@@ -31,7 +31,6 @@ const Footer = () => {
         </svg>
       </div>
 
-      {/* Location */}
       <div className={styles.LocationContainer}>
         <div>
           <span>LOCATION</span>
@@ -41,21 +40,19 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Navigation */}
       <div className={styles.NavigationContainer}>
         <div>
           <span>NAVIGATION</span>
         </div>
         <div className={styles.LinksCon}>
           {NavLinks.map((link, item) => (
-            <div className={"UnderlineEffect"} key={item}>
+            <div className={"UnderlineEffect cursor-pointer"} key={item}>
               {link.title}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Socials */}
       <div className={styles.SocialsContainer}>
         <div>
           <span>SOCIALS</span>
