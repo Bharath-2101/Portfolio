@@ -2,14 +2,16 @@
 import HeroSection from "@/sections/HeroSection/HeroSection";
 import NavMenu from "@/sections/NavMenu/NavMenu";
 import Projects from "@/sections/projects/Projects";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Archives from "@/sections/Archives/Archives";
 import Footer from "@/sections/Footer/Footer";
+import Loader from "@/sections/Loader/Loader";
 
 const page = () => {
+  const [loader, setLoader] = useState(true);
   useEffect(() => {
     const lenis = new Lenis({
       duration: 5,
@@ -39,6 +41,7 @@ const page = () => {
 
   return (
     <div>
+      {loader && <Loader loader={loader} setLoader={setLoader} />}
       <NavMenu />
       <HeroSection />
       <Projects />
