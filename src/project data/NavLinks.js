@@ -1,14 +1,13 @@
 const NavLinks = [
-  { title: "HOME" },
-  { title: "ABOUT ME" },
-  { title: "PROJECTS" },
-  { title: "CONNECT" },
+  { title: "Home" },
+  { title: "Projects" },
+  { title: "Archives" },
 ];
 
 const SocialMedia = [
   { title: "RESUME", link: "/Resume.pdf" },
   { title: "GITHUB", link: "https://github.com/Bharath-2101" },
   { title: "LINKEDIN", link: "https://www.linkedin.com/in/bharthkumark/" },
-  { title: "DRIBBLE", link: "https://dribbble.com/iamgoodman9" },
+  { title: "Blog", link: "https://github.com/bharath-2101/blog-platform" },
 ];
 export { NavLinks, SocialMedia };
