@@ -7,6 +7,7 @@ import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Archives from "@/sections/Archives/Archives";
+import Footer from "@/sections/Footer/Footer";
 
 const page = () => {
   useEffect(() => {
@@ -42,6 +43,7 @@ const page = () => {
       <HeroSection />
       <Projects />
       <Archives />
+      <Footer />
     </div>
   );
 };
