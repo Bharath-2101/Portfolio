@@ -18,12 +18,6 @@ const HeroSection = () => {
     };
 
     updateDimensions();
-
-    window.addEventListener("resize", updateDimensions);
-
-    return () => {
-      window.removeEventListener("resize", updateDimensions);
-    };
   }, [setDimensions]);
 
   return (
