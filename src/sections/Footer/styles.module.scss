@@ -1,0 +1,119 @@
+.MainContainer {
+  width: 100dvw;
+  position: relative;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin-top: calc(clamp(4rem, 4.5vw, 5rem) + 60px);
+  padding-top: calc(clamp(4rem, 4.5vw, 5rem) + 60px);
+  padding-bottom: calc(clamp(4rem, 4.5vw, 5rem) + 60px);
+  background-color: var(--color-light);
+  color: var(--color-dark-dark);
+
+  display: grid;
+  gap: 3rem;
+
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.SVGCon {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.LocationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    &:nth-child(1) {
+      span {
+        font-size: 3rem;
+        font-weight: 900;
+        font-family: "Regular";
+        line-height: 3rem;
+      }
+    }
+    &:nth-child(2) {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.NavigationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    &:nth-child(1) {
+      span {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 900;
+        font-family: "Regular";
+        line-height: 3rem;
+      }
+    }
+  }
+  .LinksCon {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+}
+
+.SocialsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    &:nth-child(1) {
+      span {
+        font-size: 3rem;
+        font-weight: 900;
+        font-family: "Regular";
+        line-height: 3rem;
+      }
+    }
+  }
+  .SocialLinksCon {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+}
+
+.CopyRight {
+  position: absolute;
+  left: 0;
+  bottom: calc(clamp(4rem, 4.5vw, 5rem) - 50px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
