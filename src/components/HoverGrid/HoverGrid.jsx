@@ -3,13 +3,6 @@ import React, { useMemo, useCallback } from "react";
 import styles from "./styles.module.scss";
 const HoverGrid = () => {
   const columnCount = 20;
-  // const generateRandom = () => {
-  //   const r = Math.floor(Math.random() * 255);
-  //   const g = Math.floor(Math.random() * 255);
-  //   const b = Math.floor(Math.random() * 255);
-  //   return { r, g, b };
-  // };
-
   const amountOfVerticalBlocks = useMemo(
     () => Math.ceil(window.innerHeight / (window.innerWidth * 0.05)),
     []
@@ -17,9 +10,7 @@ const HoverGrid = () => {
 
   const handleMouseEnter = useCallback((e) => {
     const el = e.currentTarget;
-    // const { r, g, b } = generateRandom();
     el.classList.remove(styles.fade);
-    // el.style.background = `rgb(${r},${g},${b})`;
     el.classList.add(styles.active);
 
     const animationTimeout = setTimeout(() => {
