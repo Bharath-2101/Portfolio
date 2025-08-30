@@ -8,26 +8,9 @@ const Footer = () => {
     <div className={styles.MainContainer}>
       <div className={styles.SVGCon}>
         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path
-            d="M0 100 L0 50 L30 50 L35 0 L65 0 L70 50 L100 50 L100 100 Z"
-            fill="#efefef"
-          />
-          <ellipse
-            cx="42"
-            cy="40"
-            rx="1"
-            ry="10"
-            fill="#121212"
-            stroke="#121212"
-          />
-          <ellipse
-            cx="58"
-            cy="40"
-            rx="1"
-            ry="10"
-            fill="#121212"
-            stroke="#121212"
-          />
+          <path d="M0 100 L0 50 L30 50 L35 0 L65 0 L70 50 L100 50 L100 100 Z" />
+          <ellipse cx="42" cy="40" rx="1" ry="10" />
+          <ellipse cx="58" cy="40" rx="1" ry="10" />
         </svg>
       </div>
 
