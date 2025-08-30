@@ -41,7 +41,7 @@ const DemoSeal = () => {
             d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
           />
         </defs>
-        <text fontSize="8" fill="white">
+        <text fontSize="8" className={styles.TextSvg}>
           <textPath
             href="#circlePath"
             startOffset="0"
