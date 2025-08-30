@@ -6,5 +6,8 @@
   .Svg {
     height: clamp(80px, 20vw, 150px);
     width: clamp(80px, 20vw, 150px);
+    .TextSvg {
+      fill: var(--color-light);
+    }
   }
 }
