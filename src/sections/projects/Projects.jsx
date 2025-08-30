@@ -2,25 +2,42 @@ import React, { useRef, useEffect } from "react";
 import styles from "./styles.module.scss";
 import { projects } from "@/project data/Projects";
 import DemoSeal from "@/components/DemoSeal/DemoSeal";
+import { mouseEnter, mouseLeave } from "@/Animation/Anime";
+import gsap from "gsap";
+import MorphSVGPlugin from "gsap/MorphSVGPlugin";
+gsap.registerPlugin(MorphSVGPlugin);
 
 const Projects = () => {
   const rowsRef = useRef([]);
+  const pathRefs = useRef([]);
+
+  const animateSvg = (element, direction, mouseAction) => {
+    const paths =
+      mouseAction === "enter" ? mouseEnter[direction] : mouseLeave[direction];
+
+    gsap.fromTo(
+      element,
+      { attr: { d: paths.Initial } },
+      {
+        attr: { d: paths.Final },
+        duration: 0.4,
+        ease: "cubic-bezier(0.83, 0, 0.17, 1)",
+      }
+    );
+  };
 
   const handleMouseEnter = (e, index) => {
     const row = rowsRef.current[index];
     if (!row) return;
-
-    const span = row.querySelector("span");
-    if (!span) return;
 
     const rect = row.getBoundingClientRect();
     const mouseY = e.clientY - rect.top;
     const halfHeight = rect.height / 2;
 
     if (mouseY <= halfHeight) {
-      span.style.transformOrigin = "top";
+      animateSvg(pathRefs.current[index], "Up", "enter");
     } else {
-      span.style.transformOrigin = "bottom";
+      animateSvg(pathRefs.current[index], "Down", "enter");
     }
   };
 
@@ -28,17 +45,14 @@ const Projects = () => {
     const row = rowsRef.current[index];
     if (!row) return;
 
-    const span = row.querySelector("span");
-    if (!span) return;
-
     const rect = row.getBoundingClientRect();
     const mouseY = e.clientY - rect.top;
     const halfHeight = rect.height / 2;
 
     if (mouseY <= halfHeight) {
-      span.style.transformOrigin = "top";
+      animateSvg(pathRefs.current[index], "Up", "leave");
     } else {
-      span.style.transformOrigin = "bottom";
+      animateSvg(pathRefs.current[index], "Down", "leave");
     }
   };
 
@@ -84,7 +98,16 @@ const Projects = () => {
               {project.category}
             </div>
             <div className="text-right">{project.year}</div>
-            <span />
+            <svg
+              viewBox="0 0 100 100"
+              className={styles.SvgProject}
+              preserveAspectRatio="none"
+            >
+              <path
+                ref={(el) => (pathRefs.current[index] = el)}
+                d="M 100 0 H 100 Q 100 50 100 100 H 100 V 0 Z"
+              />
+            </svg>
           </a>
         ))}
       </div>
