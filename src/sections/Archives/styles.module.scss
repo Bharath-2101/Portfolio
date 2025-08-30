@@ -30,25 +30,22 @@
       z-index: 2;
       cursor: pointer;
       position: relative;
-      div {
-        mix-blend-mode: difference;
-        transition: transform 0.2s linear;
-      }
-      span {
+
+      .SvgProject {
         height: 100%;
         width: 100%;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
-        background-color: white;
-        transform: scaleY(0);
-        transition: transform 0.1s linear;
+        fill: var(--color-light);
       }
+      div {
+        mix-blend-mode: difference;
+        transition: transform 0.2s linear;
+      }
+
       &:hover {
-        span {
-          transform: scaleY(1);
-        }
         div {
           &:nth-child(1) {
             transform: translateX(5%);
