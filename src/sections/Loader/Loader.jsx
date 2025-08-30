@@ -54,7 +54,6 @@ const Loader = ({ loader, setLoader }) => {
           <path
             ref={(el) => (pathRefs.current[i] = el)}
             d="M0 0 L100 0 L100 100 Q50 50 0 100 Z"
-            fill="#efefef"
           />
         </svg>
       ))}
