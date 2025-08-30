@@ -87,9 +87,6 @@
   --color-text: #1c1d20;
   --color-text-light: #fff;
 
-  --alert-error: #ff4444;
-  --alert-success: #24c958;
-
   --animation-primary: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
   --animation-fast: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
   --animation-smooth: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
